@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block left %}
+    <div class="wrapper ">
+        <section class="course-page category-page">
+            <article class="course-page__filter category-page__filter">
+                <h4>Refine Results</h4>
+                <form class ="filter-form" action="">
+                {# still have to fix the input area #}
+                        <div>
+                            <h5>Category</h5>
+                            {% for category in categories %}
+                            <input type="radio" id="cat{{loop.index}}" name="category" value={{category.id}}>
+                            <label for="cat{{loop.index}}">{{category.name}}</label><br>
+                            {% endfor %}
+                        </form>
+                        <div>
+                            <h5>Level</h5>
+                            <input type="radio" id="lev1" name="level" value="Beginner">
+                            <label for="lev1">Beginner</label><br>
+                            <input type="radio" id="lev2" name="level" value="Intermediate">
+                            <label for="lev2">Intermediate</label><br>  
+                            <input type="radio" id="lev3" name="level" value="Advanced">
+                            <label for="lev3">Advanced</label><br><br>
+                            <input type="radio" id="lev4" name="level" value="Expert">
+                            <label for="lev5">Expert</label><br><br>
+                            <input type="radio" id="lev5" name="level" value="Professional">
+                            <label for="lev5">Professional</label><br><br>
+                        </div>
+                        <div class="range">
+                            <h5>Price</h5>
+                            <label for="price">20</label>
+                            <input type="range" id="price" min="20" max="1000">
+                            <label for="price">1000</label>
+                        </div>
+                        <div>
+                            <h5>Tags</h5>
+                            <ul class="category-tags">
+                                <button id="tagBtn" name="tag" type="button" data-tag="Beginner"><li>Beginner</li></button>
+                                <button id="tagBtn" name="tag" type="button" data-tag="Python"><li>Python</li></button>
+                                <button id="tagBtn" name="tag" type="button" data-tag="React"><li>React</li></button>
+                                <button id="tagBtn" name="tag" type="button" data-tag="Advanced"><li>Advanced</li></button>
+                            </ul>
+                        </div>
+                        <input  class="submit-filter" id="frmButton" type="submit" value="Submit">
+                    </form>
+            </article>
+            <article class="card-main  card-main-categories ">
+                <div class="category-page__selector">
+                <p>Courses</p>
+                <form class ="sort-form" action="">
+                    <label for="sort-select"></label>
+                    <select name="sort" id="sort-select">
+                        <option value="">Sort</option>
+                        <option value="na">Newest</option>
+                        <option value="nd">Oldest</option>
+                        <option value="prd">Price descending</option>
+                        <option value="pra">Price Ascending</option>
+                        <option value="dud">Long</option>
+                        <option value="dua">Short</option>
+                    </select>
+                    <!-- <input id="SortButton" type="submit" value="Submit"> -->
+                </div>
+                <ul class="card-section section-categories">
+                    {% for course in courses %}
+                        {% include 'partials/cards.njk' %}
+                    {% endfor %}
+                </ul>
+                <div class="paginaton-wrapper">
+                    <ul class="pagination">
+                        <li><a class="active" href="#0">1</a></li>
+                        <li><a href="#0">2</a></li>
+                        <li><a href="#0">3</a></li>
+                        <li><a href="#0">4</a></li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+          {% include 'partials/price-banner.njk' %}
+    </div>
+  
+{% endblock %}
+
+{# {% block right %}
+    {% for course in courses %}
+        <p>{{course.name}}</p>
+    {% endfor %}
+{% endblock %} #}
+
+{% block scripts %}
+<script src="/static/js/courses.js"></script>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block left %}
+
+<div class="wrapper">
+    <section class="half-wrapper">
+        <article class="form">
+            <h2 class="titleDarkBg">Sign up to Start the Journey</h2>
+            <form class="signup-form login-form" name="signup-form" action="">
+
+                <div class="login-form__user login-form__email">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required />
+                </div>
+                 <div class="login-form__user login-form__email">
+                    <label for="email-repeat">Repeat your email</label>
+                    <input type="email" name="repeat-email" required />
+                </div>
+
+                 <div class="login-form__user">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" required />
+                </div>
+
+                <div class="login-form__password">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" autocomplete required />
+                </div>    
+                <div class="login-form__password password-repeat">
+                    <label for="password-repeat">Repeat your password</label>
+                    <input type="password" name="password-repeat" autocomplete required />
+                </div>    
+                <input  class="login-form__submit" type="submit" value="Submit"/>
+            </form>
+            {# <button  type="submit" value="Submit" class="btn-in btn-up">Sign Up </button> #}
+            {# <p>Don't have an account? <a href="/signup">Sign up now</a>!</p> #}
+        </article>
+    </section>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/signup.js"></script>
+{% endblock %}
+
+
+{# <div class="wrapper">
+    <section class="half-wrapper">
+        <article class="form">
+            <h2 class="titleDarkBg">Log in and Get Learning </h2>
+            <form class="login-form" name="login-form" action="">
+                <div class="login-form__user">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" autofocus autocomplete="on" required/>
+                </div>
+                <div class="login-form__password">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" autocomplete="on" required />
+                </div>
+                <div class="login-submit">
+                    <input  class="login-form__submit "type="submit" value="Submit"/>
+                </div>
+            </form>
+            <button class="btn-in">Log In</button>
+            <span class="singUp">
+                <p>Don't have an account? <a href="/signup">Sign up now</a>!</p>
+            </span>
+        </article>
+    </section>
+</div> #}

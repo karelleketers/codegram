@@ -1,0 +1,45 @@
+.testimonials{
+    margin-top: 8rem;
+  @include dark-bg; 
+
+    &__list{
+        margin-top: 3rem;
+        display:grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        &--item{
+            .testimonials__info{
+                display: flex;
+                flex-direction: column;
+                //align-items: center;
+                blockquote p{
+                    margin-top:-0.5rem;
+                }
+                div{
+                    margin-left: 2rem;
+                    display:flex;
+                    align-items: center;
+                    .avatar{
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+            @include fancy-blockquote($color-gray-lightest, $text-base);
+            color: $color-broken-white ;
+            border: 1px solid rgba(204, 204, 204, 0.452);
+            padding:1rem;
+        }
+    }
+    @media (min-width:38rem){
+        &__list{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (min-width:50.6rem){
+        &__list{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}

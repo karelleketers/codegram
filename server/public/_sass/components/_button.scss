@@ -1,0 +1,29 @@
+.btn{
+    padding:0.8rem 1.5rem;
+    border-radius:0.5rem;
+    font-size:1.2rem;
+    color:$color-broken-white;
+   
+}
+
+.primary-btn{
+    @include gradient-primarybtn;
+}
+.primary-btn:hover{
+   
+    background: rgb(157, 1, 172);
+}
+
+.secondary-btn{
+    background: rgb(157, 1, 172);
+}
+.secondary-btn:hover{
+    @include gradient-primarybtn;
+}
+
+.tertiary-btn{
+    background-color: $color-ebony;
+}
+.tertiary-btn:hover{
+    background-color: $color-gray;
+}

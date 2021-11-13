@@ -1,0 +1,66 @@
+{# <div class="wrapper main-card">
+    <article class="card-main">
+        <div class="centralised-text-button ">
+            <p class="supHeading">Courses</p>
+            <h2>The most amazing </h2>
+            <p class="promo-banner__left--text ">Practical Hands-on Online IT Training and Certifications</p>
+        </div>
+        
+        <ul class="card-section"> #}
+            {# {% for course in courses | slice(3) %} #}
+             {# {% for course in courses | slice(6) %} #}
+                <li>
+                    <div class="card">
+                        <div class="card--header"> 
+                        {# background img  #}
+                            <div class="card--header__promo card-promo">
+                                <span class="promo-new" href="#">New</span>
+                                <span class="promo-percOff" href="#">-30%</span>
+                            </div>
+                            <div class="card-header__price  ">
+                                <p class="single-price">{{course.price}} €</p> 
+                            </div>
+                        </div>
+                        <div class="card--info">
+                            <div class="card--info__level learning-level">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.775 44.775"><g xmlns="http://www.w3.org/2000/svg"><path d="M42.388 4.999v34.777a5 5 0 11-10 0V5c0-2.762 2.238-5 5-5s5 2.237 5 4.998zM27.388 16.999v22.777a5 5 0 11-10 0V17a5 5 0 015-5c2.763 0 5 2.237 5 4.998zM12.388 29.999v9.777a5 5 0 11-10 0V30a5 5 0 0110-.001z" data-original="#000000"/></g></svg>
+                                <p>{{course.difficulty_level}}</p>
+                            </div>
+                            <div class="card-info">
+                                <h3><a href="/course/{{course.id}}" {{ course.id}} >{{course.name}}</a></h3>
+                                <div class="card--info__lecture">
+                                    <img class="lecture-avatar avatar" src="./static/images/avatar.png" alt=""/>
+                                    <p>John Smith</p>
+                                </div>
+                            </div>
+                            <div class="card--info__duration">
+                                <div class="score"> 4/5</div>
+                                <div class="time">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.867 477.867"><path d="M238.933 0C106.974 0 0 106.974 0 238.933s106.974 238.933 238.933 238.933 238.933-106.974 238.933-238.933C477.726 107.033 370.834.141 238.933 0zm0 443.733c-113.108 0-204.8-91.692-204.8-204.8s91.692-204.8 204.8-204.8 204.8 91.692 204.8 204.8c-.122 113.058-91.742 204.678-204.8 204.8z"/><path d="M238.933 85.333c-9.426 0-17.067 7.641-17.067 17.067v119.467H102.4c-9.426 0-17.067 7.641-17.067 17.067S92.974 256 102.4 256h136.533c9.426 0 17.067-7.641 17.067-17.067V102.4c0-9.426-7.641-17.067-17.067-17.067z"/></svg>
+                                    <p>{{course.duration}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card--action">
+                            <div class="">
+                                <a  class="add-cart" href="#">
+                                    <div class="card--action__item">
+                                        <svg viewBox="0 -31 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0014.422-10.879l60-210a15.003 15.003 0 00-2.445-13.152A15.006 15.006 0 00497 60H130.367l-10.722-48.254A15.003 15.003 0 00105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zm0 0M150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0M362 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"/></svg>
+                                    </div>
+                                </a>
+                                <a class="add-wish"  href="#">
+                                    <div class="card--action__item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.534 477.534"><path d="M438.482 58.61a130.815 130.815 0 00-95.573-41.711 130.968 130.968 0 00-95.676 41.694l-8.431 8.909-8.431-8.909C181.284 5.762 98.662 2.728 45.832 51.815a130.901 130.901 0 00-6.778 6.778c-52.072 56.166-52.072 142.968 0 199.134l187.358 197.581c6.482 6.843 17.284 7.136 24.127.654.224-.212.442-.43.654-.654l187.29-197.581c52.068-56.16 52.068-142.957-.001-199.117zm-24.695 175.616h-.017L238.802 418.768 63.818 234.226c-39.78-42.916-39.78-109.233 0-152.149 36.125-39.154 97.152-41.609 136.306-5.484a96.482 96.482 0 015.484 5.484l20.804 21.948c6.856 6.812 17.925 6.812 24.781 0l20.804-21.931c36.125-39.154 97.152-41.609 136.306-5.484a96.482 96.482 0 015.484 5.484c40.126 42.984 40.42 109.422 0 152.132z"/></svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            {# {% endfor %}
+        </ul>
+        <div class="btn-center-item">
+            <a class="btn primary-btn" href="/courses" title="courses" >View More</a>
+        </div>
+    </article>
+</div> #}

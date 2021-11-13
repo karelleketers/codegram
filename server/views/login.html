@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block left %}
+<div class="wrapper">
+    <section class="half-wrapper">
+        <article class="form">
+            <h2 class="titleDarkBg">Log in and Get Learning </h2>
+            <form class="login-form" name="login-form" action="">
+                <div class="login-form__user">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" autofocus autocomplete="on" required/>
+                </div>
+                <div class="login-form__password">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" autocomplete="on" required />
+                </div>
+                <div class="login-submit">
+                    <input  class="login-form__submit" type="submit" value="Submit"/>
+                </div>
+            </form>
+            <span class="singUp">
+                <p>Don't have an account? <a href="/signup">Sign up now</a>!</p>
+            </span>
+            <span class="btn-logout singUp">Already logged in? Click here to LOG OUT.</span>
+        </article>
+    </section>
+</div>
+{% endblock %}

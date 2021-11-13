@@ -1,0 +1,80 @@
+@mixin center-margin {
+    margin: 0 auto
+}
+
+@mixin cover-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+@mixin padding{
+    padding: 1rem;
+    //questionable
+}
+
+@mixin gradient-primarybtn { 
+    background: linear-gradient(to top, #db1b74,#ef4a3a);
+    color: $color-white;
+    font-size: 1.2rem ;
+}
+
+@mixin gradient-bg { 
+    background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+    color: $color-white;
+    h2{
+        color:$color-white; 
+        margin: 0.5rem 0 1rem; 
+    }
+    p{
+        color:$color-broken-white ;
+    }
+}
+
+@mixin dark-bg{
+    background: $color-ebony;
+    color: $color-white;
+
+    h2{
+        color:$color-white; 
+        margin: 0.2rem 0 0.5rem; 
+    }
+    h3,h4{
+        color: $color-white;;
+    }
+    p:not(.supHeading){
+        color:$color-broken-white ;
+    }
+}
+
+@mixin light-bg{
+    background: $color-white;
+    h2{
+        color:$color-ebony; 
+        margin: 0.2rem 0 0.5rem; 
+    }
+    p:not(.supHeading){
+        color:$color-gray;
+    }
+}
+
+@mixin fancy-blockquote ($colour, $fontsize) {
+
+    blockquote {
+     
+        quotes: none;
+        font-size: $fontsize;
+        margin: $margin-sm $spacing-sm;
+        padding: $spacing-md $spacing-base;
+    }
+
+    blockquote:before {
+        color: $colour;
+        content: "\201c";
+        font-size: $text-xxl;
+        line-height: 1rem;
+        margin-right: $spacing-sm;
+        vertical-align: -0.4rem;
+    }
+}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block left %} 
+
+{% include 'partials/hero.njk' %}
+
+{% include 'partials/promo-banner.njk' %}
+
+{% include 'partials/statistics.njk' %}
+
+<div class="wrapper main-card">
+    <article class="card-main">
+        <div class="centralised-text-button ">
+            <p class="supHeading">Courses</p>
+            <h2>The most amazing </h2>
+            <p class="promo-banner__left--text ">Practical Hands-on Online IT Training and Certifications</p>
+        </div>
+        
+        <ul class="card-section">
+            {# {% for course in courses | slice(3) %} #}
+             {% for course in courses  %}
+                {% include 'partials/cards.njk' %}
+             {% endfor %}
+        </ul>
+        <div class="btn-center-item">
+            <a class="btn primary-btn" href="/courses" title="Courses" >View More</a>
+        </div>
+    </article>
+</div>
+
+
+{% include 'partials/price-banner.njk' %}
+
+{% include 'partials/testimonials.njk' %}
+
+{% include 'partials/news.njk' %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block left %} 
+<section class="cart">
+    <div class="cart__container">
+        {{cart.id}}
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/cart.js"></script>
+{% endblock %}

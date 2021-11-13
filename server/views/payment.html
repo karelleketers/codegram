@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block left %} 
+<section class="payment">
+    <div class="payment__container">
+        {{payment.id}}
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/payment.js"></script>
+{% endblock %}

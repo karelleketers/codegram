@@ -1,0 +1,28 @@
+<section class=" wrapper ">
+    <article class="promo-banner">
+        <div class="promo-banner__left">
+            <p class="supHeading">Start your journey</p>
+            <h2>Explore top courses</h2>
+            <p class="promo-banner__left--text ">Propel your career, get a certificate, or expand your knowledge at any level.</p>
+             <a class="btn tertiary-btn" href="/signup">Sign Up Now</a>
+        </div>
+        <div class="promo-banner__right">
+            <ul class="promo-banner__right--list promo-course">
+                {% set length = 4 %} 
+                {% for i in range(0, length) %}
+                    <li class="">
+                        <a class="promo-course__item" href="/course/{{courses[i].id}}">
+                            <div class="">
+                                <img class="promo-avatar avatar" src="./static/images/avatar.png" alt=""/>
+                            </div>
+                            <div>
+                                <h4>{{courses[i].name}}</h4>
+                                <p>Jon Snow</p>
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </article>
+</section>

@@ -1,0 +1,64 @@
+# Server testing with Supertest
+## Tests all API endpoints
+
+- Categories
+  - Get all: GET('/categories')
+  - Get by ID: GET('/categories/:categoryId')
+  - Get by name: GET('/categories/name/:categoryName')
+  - Create: POST('/categories')
+  - Update: PUT('/categories/:categoryId')
+  - Delete: DELETE('/categories/:categoryId')
+- Courses
+  - Get all: GET('/courses')
+  - Get by ID: GET('/courses/:courseId')
+  - Create: POST('/courses')
+  - Update: GET('/courses/:courseId')
+  - Delete: DELETE('/courses/:courseId')
+- Newsletters
+  - Get all: GET('/newsletters')
+  - Get by ID: GET('/newsletters/:newsletterId')
+  - Create: POST('/newsletters')
+  - Update: PUT('/newsletters/:newsletterId')
+  - Delete: DELETE('/newsletters/:newsletterId')
+- Orders
+  - Get all: GET('/orders')
+  - Get by ID: GET('/orders/:orderId')
+  - Create: POST('/orders')
+  - Update: PUT('/orders/:orderId')
+  - Delete: DELETE('/orders/:orderId')
+- Payments
+  - Get all: GET('/payments')
+  - Get by ID: GET('/payments/:paymentId')
+  - Create: POST('/payments')
+  - Update: PUT('/payments/:paymentId')
+  - Delete: DELETE('/payments/:paymentId')
+- Profiles
+  - Get all: GET('/profiles')
+  - Get by ID: GET('/profiles/:profileId')
+  - Create: POST('/profiles')
+  - Update: PUT('/profiles/:profileId')
+  - Delete: DELETE('/profiles/:profileId')
+- Promotions
+  - Get all: GET('/promotions')
+  - Get by ID: GET('/promotions/:promotionId')
+  - Create: POST('/promotions')
+  - Update: PUT('/promotions/:promotionId')
+  - Delete: DELETE('/promotions/:promotionId')
+- Subscriptions
+  - Get all: GET('/subscriptions')
+  - Get by ID: GET('/subscriptions/:subscriptionId')
+  - Create: POST('/subscriptions')
+  - Update: PUT('/subscriptions/:subscriptionId')
+  - Delete: DELETE('/subscriptions/:subscriptionId')
+- Users
+  - Get all: GET('/users')
+  - Get by ID: GET('/users/:userId')
+  - Create: POST('/users')
+  - Update: PUT('/users/:userId')
+  - Delete: DELETE('/users/:userId')
+- Videos
+  - Get all: GET('/videos')
+  - Get by ID: GET('/videos/:videoId')
+  - Create: POST('/videos')
+  - Update: PUT('/videos/:videoId')
+  - Delete: DELETE('/videos/:videoId')

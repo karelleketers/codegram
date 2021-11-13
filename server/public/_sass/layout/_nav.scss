@@ -1,0 +1,131 @@
+.navbar{
+    // height:rem;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    // overflow: hidden;
+
+    &__left{
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+        &--logo{
+            width: 4rem;
+            transition: width 0.4s ease;
+            @media screen and (min-width: 45rem) {
+                width: 10rem;
+            }
+        }
+
+        &--dropdown{
+            margin: 0 3rem;
+       
+            width:8rem;
+
+            .dropbtn{
+                width:100%;
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                color: $color-broken-white ;
+                font-size: $text-md;  
+                border: none;
+                outline: none;
+                background-color: inherit;
+                margin: 0;
+
+
+                .svg-dropdown{
+                    width: 0.8rem;
+                    fill:$color-broken-white;
+                }
+            
+            }
+
+            .dropdown-list{
+                display: none;
+                position: absolute;
+                background-color: $color-ebony;
+                padding: 2rem;
+                margin-top: 2rem;
+                z-index: 100;
+
+                li{
+                    padding: 0.8rem 1rem;
+
+                    a{
+                        color: $color-broken-white ;
+                    }
+                }
+
+                li:hover{
+                    background-color:$color-gray-lightest;
+                }
+            }
+            .visible {
+                display: block;
+            }
+
+        }
+        //hover will change to a click the dropdown
+
+        &--form{
+            .search-form{
+                display: flex;
+                align-items: center;
+                width: 22rem;
+  
+
+                input{
+                    width: 85%;
+                }
+                >input{
+                    padding: 0.5rem 2rem;
+                    font-size: 1rem;
+                    color: $color-broken-white;
+                    border:3.2px solid $color-broken-white;
+                    border-radius: .5rem 0 0 .5rem;
+                    outline: none;
+
+                }
+
+                button{
+                    width: 15%;
+                    padding: 0.45rem;
+                    outline: none;
+                    border-radius: 0 .5rem .5rem 0;
+                    border: none;
+                    background-color:$color-gray;
+                    svg{
+                        width:1.5rem;
+                        fill: $color-broken-white;
+                    }
+                }
+            }
+        }
+    }
+
+    &__right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .cart__item{
+            color:$color-broken-white ;
+        }
+        li{
+            margin-left: 1.5rem;
+            .btn{
+                display: block;
+            }
+
+            .hide {
+                display: none;
+            }
+            svg{
+                width:2.1rem;
+                fill:$color-broken-white;
+            }
+        }
+    }
+}

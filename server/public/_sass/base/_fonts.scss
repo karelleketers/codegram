@@ -1,0 +1,38 @@
+h1{
+    font-size: $text-xl;
+    font-weight: $large; 
+    width: 100%;
+    color:$color-white;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+ }
+
+ @media (min-width:76.5rem){
+    h1{
+    font-size: $text-xxl;
+    width: 50%;
+    }
+}
+
+  h2{
+      font-size: 2rem
+  }
+
+ p.subHeading{
+   font-size: 1.2rem;
+   color:$color-broken-white ;
+   margin-bottom: 3rem;
+   width: 100%;
+ }
+
+ @media (min-width:76.5rem){
+    p.subHeading{
+    font-size: 1.3rem;
+    margin-bottom: 4rem;
+    width: 70%;
+    }
+}
+
+ p.supHeading{
+    color: $color-cocktail;
+}

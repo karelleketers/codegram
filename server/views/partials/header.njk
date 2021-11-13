@@ -1,0 +1,52 @@
+<header>
+    <nav class="navbar wrapper">
+
+        <ul class="navbar__left">
+            <li class="navbar__left--logo">
+                <a class="nav__link" href="/" title="Homepage CodeGram"> 
+                    <svg class="svg--logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 47"><text transform="translate(0 30)" fill="#f5f5f5" font-size="35" font-family="MaturaMTScriptCapitals, Matura MT Script Capitals"><tspan x="0" y="0">Code.g</tspan></text></svg>
+                </a>
+            </li>
+            <li class="navbar__left--dropdown">
+                <button class="dropbtn">
+                    Categories
+                    <svg class="svg-dropdown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.52 443.52"><path d="M221.863 300.028L29.13 107.294c-6.664-6.663-17.468-6.663-24.132 0-6.662 6.665-6.662 17.468 0 24.132l204.8 204.8c6.664 6.662 17.468 6.662 24.132 0l204.8-204.8c6.548-6.78 6.36-17.584-.42-24.132-6.614-6.387-17.099-6.387-23.712 0L221.863 300.028z" data-original="#000000" xmlns="http://www.w3.org/2000/svg"/></svg>
+                </button>
+                <div class="dropdown-list">
+                    <div class="">
+                        <ul class="dropdown-list-items">
+                            {% block left %}
+                                {% for category in categories %}
+                                    <li><a href="/courses?category={{category.id}}">{{category.name}}</a></li> 
+                                {% endfor %}
+                            {% endblock %}  
+                        </ul>
+                        <div class="promotion-card">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="navbar__left--form">
+                {# <form class="search-form">
+                    <input type="text" name="search" placeholder="search..">
+                    <button class="submit" type="submit">
+                        <svg class="cart cart-items" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 478.208 478.208"><path d="M473.418 449.285L303.28 279.148c59.759-73.087 48.954-180.779-24.132-240.538S98.369-10.344 38.61 62.742-10.344 243.521 62.742 303.28c62.953 51.473 153.453 51.473 216.406 0l170.138 170.138c6.78 6.548 17.584 6.36 24.132-.42 6.387-6.614 6.387-17.099 0-23.713zm-302.2-141.534c-75.37-.085-136.449-61.163-136.533-136.533 0-75.405 61.128-136.533 136.533-136.533s136.533 61.128 136.533 136.533-61.128 136.533-136.533 136.533z"/></svg>
+                    </button>
+                </form> #}
+            </li>
+        </ul>
+        <ul class="navbar__right">
+            <li >
+                <svg class="heart wish-list" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.534 477.534"><path d="M438.482 58.61a130.815 130.815 0 00-95.573-41.711 130.968 130.968 0 00-95.676 41.694l-8.431 8.909-8.431-8.909C181.284 5.762 98.662 2.728 45.832 51.815a130.901 130.901 0 00-6.778 6.778c-52.072 56.166-52.072 142.968 0 199.134l187.358 197.581c6.482 6.843 17.284 7.136 24.127.654.224-.212.442-.43.654-.654l187.29-197.581c52.068-56.16 52.068-142.957-.001-199.117zm-24.695 175.616h-.017L238.802 418.768 63.818 234.226c-39.78-42.916-39.78-109.233 0-152.149 36.125-39.154 97.152-41.609 136.306-5.484a96.482 96.482 0 015.484 5.484l20.804 21.948c6.856 6.812 17.925 6.812 24.781 0l20.804-21.931c36.125-39.154 97.152-41.609 136.306-5.484a96.482 96.482 0 015.484 5.484c40.126 42.984 40.42 109.422 0 152.132z"/></svg>
+            </li>
+            <li class="cart">
+                <svg viewBox="0 -31 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0014.422-10.879l60-210a15.003 15.003 0 00-2.445-13.152A15.006 15.006 0 00497 60H130.367l-10.722-48.254A15.003 15.003 0 00105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zm0 0M150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0M362 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"/></svg>
+                <span class="cart__item itemNr">0</span>
+            </li>
+            <li>
+                <a class="login-btn btn primary-btn" href="/login">Log In</a>
+            </li>
+        </ul>
+    </nav>
+</header>

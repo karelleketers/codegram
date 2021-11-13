@@ -1,0 +1,58 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins';
+
+// 2. Vendors
+@import
+'vendors/fonts',
+'vendors/normalize';
+
+// 3. Base
+@import
+'base/base',
+'base/fonts',
+'base/helpers',
+'base/typography';
+
+// 4. Layout
+@import
+'layout/footer',
+'layout/form',
+'layout/hero',
+'layout/header',
+'layout/nav',
+'layout/news',
+'layout/price-banner',
+'layout/promo-banner',
+'layout/statisctics',
+'layout/testimonials';
+
+
+
+// 5. Components
+@import
+'components/button',
+'components/card',
+'components/hero',
+'components/icon',
+'components/image';
+
+
+
+// 6. Page-specific styles
+@import 
+'pages/courses',
+'pages/login',
+'pages/home';
+
+// 7. Themes
+@import
+'themes/default';
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif; // TODO: Remove me, I'm just a test
+}

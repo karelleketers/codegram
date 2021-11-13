@@ -1,0 +1,123 @@
+.category-page{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns:1fr 3fr;
+    gap:2rem;
+
+    .category-page__filter{
+        h4{
+            margin-bottom: 1.5rem;
+            color: $color-white;
+        }
+    }
+    .card-main-categories{
+        margin-top:0rem
+    }
+    .submit-filter{
+        padding: .8rem 2rem;
+        border-radius: 2rem;
+       color: $color-white;
+       margin-top: 2rem;
+       border:none; 
+       background-color:$color-pink;
+    }
+    // .category-tags{
+    //     border-bottom: 1px solid rgba(204, 204, 204, 0.267);
+    //     button{
+    //         color: $color-white;
+       
+
+    //     }
+    // }
+
+    .filter-form{
+        color:$color-broken-white ;
+        font-size: 1rem;
+        h5{
+            color:$color-white;
+            background-color:$color-gray;
+            padding:0.5rem;
+            margin: 2rem 0 1rem;
+
+        }
+        .range{
+            padding:2rem 0;
+            color: $color-broken-white;
+            input[type=range]{
+                width: 100%;
+                height: 5rem;
+                padding: 0.5re;
+                border-radius: 10px;
+                background-color: #eee;
+                border: 2px solid #ccc;
+              }     
+            
+        }
+        .category-tags{
+            border-bottom: 1px solid rgba(204, 204, 204, 0.267);
+            padding-bottom: 2rem;
+            margin-top:2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+          
+            li{
+                color: $color-white;
+                padding: 0.5rem 0.5rem;
+                cursor: pointer;
+                border-radius: 0.5rem;
+ 
+                background-color:$color-gray-lightest;
+            }
+            li:hover{
+                background-color: $color-gray-lighter;
+            }
+
+            button{
+                margin: 0.7rem;
+                outline: none;
+                border: none; 
+                background-color: transparent;
+            }
+        }
+    }  
+    
+    .category-page__selector{
+        display: flex;
+        justify-content:space-between;
+    }
+
+}
+
+.paginaton-wrapper{
+
+    display:flex;
+    justify-content: center;
+    ul{
+        border-radius: 2.5rem;
+            li{
+            display: inline-block;
+                a{
+                    display: block;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    line-height: 2.5rem;
+                    background-color: #fff;
+                    text-align: center;
+                    text-decoration: none;
+                    color: #252525;
+                    border-radius: 0.25rem;
+                    margin: 0.31rem;
+                    box-shadow: inset 0  0.31rem 0.62rem rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.5);
+                    transition: all .3s ease; 
+                }
+                a:hover,
+                a.active{
+                    color: #fff;
+                    background-color: $color-pink;
+                }
+            
+        }
+            
+    }
+}

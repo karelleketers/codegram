@@ -1,0 +1,82 @@
+.hero{
+    height:48rem;
+    border-radius: 0 0 30% 0;
+    background-image: url("../images/header.jpg");
+    @include cover-background;
+
+    .jumbotron{
+        padding-top:3rem;
+        position: relative;
+
+        &__top{
+            margin-bottom: 2rem;
+            a{
+                padding: 1rem 3rem;
+            }
+        }
+
+
+        .list--jambotron{
+            display: flex;
+            justify-content:center;
+        }
+
+
+        &__list{
+            margin-top: 6rem;
+            position:absolute;
+            display: grid;
+            grid-template-columns: 1fr;  
+            gap: 2rem;
+
+            &--item{
+                border-radius: 1rem;
+                background-color: $color-gray;
+                padding:2.5rem;
+
+                display:flex;
+                flex-direction:column;
+                justify-content: center;
+                align-items:center;
+
+                color: $color-white;
+                text-align: center;
+
+                p{
+                    margin : 1rem 0 2rem;
+                    color: $color-broken-white;
+                }
+                a{
+                    width:50%;
+                    display:inline;
+                }
+            }
+        }
+    }
+    @media (min-width:38rem){
+        .jumbotron{
+            padding-top:5rem;
+            &__list{
+                margin-top: 13rem      
+            }
+        }
+    }     
+
+    @media (min-width:76.5rem){
+        .jumbotron{
+            padding-top:8rem;
+            &__list{
+            grid-template-columns: 1fr 1fr ; 
+            margin-top: 7rem;
+            }
+        }
+    }
+
+    @media (min-width:87.5rem){
+        .jumbotron{
+            &__list{
+                grid-template-columns: 1fr 1fr 1fr; 
+            }
+        }
+    }
+}

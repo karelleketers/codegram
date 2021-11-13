@@ -1,0 +1,60 @@
+.half-wrapper{
+    width: 50%; 
+    margin: 0 auto;
+    h2{
+        margin-bottom: 2rem;
+    }
+
+    .form{
+        margin-top: 8rem;
+
+        .login-form{
+        
+            &__user, &__password , &__submit{
+
+                display: flex;
+                flex-direction: column;
+                *{
+                    flex-basis: 100%;
+                    color:$color-white;
+                }
+                label{
+                    padding: 1rem 0 0.3rem;
+                    font-size:1.2rem;
+                }
+                input{
+                    margin-bottom: 2rem;
+                    padding: 0.8rem;
+                    outline: none;
+                    border: none ;
+                    border-radius:0.2rem ;
+                    color: $color-ebony;
+                }
+            }
+            &__submit{
+                // width: 100%;
+                padding: 0.8rem 2rem;
+                text-align: center;
+                border-radius: 0.2rem;
+                outline: none;
+                border: none;
+                @include gradient-primarybtn;
+                transition: all .2s ease-in-out
+            }
+
+            &__submit:hover{
+                background-color:#db1b74;
+            }
+        }
+
+
+
+        span.singUp{
+            color:$color-gray-light;
+            p{
+                margin-top: 1rem;
+            }
+     
+        }
+    }
+}

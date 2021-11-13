@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block left %} 
+<section class="article news">
+    <article class="article__container card-section">
+        {{article.id}}
+    </article>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/article.js"></script>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block left %} 
+<section class="course">
+    <div class="wrapper">
+        <div class="course__container">
+            {{course.id}}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/course.js"></script>
+{% endblock %}

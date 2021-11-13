@@ -1,0 +1,39 @@
+<div class=" wrapper ">
+    <section class=" news ">
+        <div class="centralised-text-button ">
+            <p class="supHeading">News</p>
+            <h2>Keep Up With The Latest</h2>
+            <p class="promo-banner__left--text ">All Your Sources For Online IT Training and Certifications</p>
+        </div>
+        <ul class="card-section">
+            {% set length = 3 %} 
+            {% for i in range(0, length) %}
+            <li>
+                <div class="card card--blog">
+                    <div class="card--header card--blog__header" data-id="{{news[i].id}}"> 
+                        {# background img  #}
+                        <div class="card--header__promo card-promo--blog"></div>
+                    </div>
+                    <div class="card--info card--blog__info">
+                        <p class="post-category">{{news[i].subtitle}}</p>
+                        <div class="card-info">
+                            <h3><a href="/news/{{news[i].id}}">{{news[i].title}}</a></h3>
+                            <p>{{news[i].summary}}</p>
+                        </div>
+                        <div class="card--info__duration card--blag__info--duration">
+                            <div class="card--info__lecture">
+                                <img class="lecture-avatar avatar" src="./static/images/avatar.png" alt=""/>
+                                <p>{{news[i].author_firstname}} {{news[i].author_lastname}}</p>
+                            </div>
+                            <div class="score" data-date={{article.createdAt}}>--</div> 
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="btn-center-item">
+            <a class="btn primary-btn" href="/news" title="News" >View All Posts</a>
+        </div>
+    </section>
+</div>

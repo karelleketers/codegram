@@ -1,0 +1,110 @@
+
+.footer{
+
+    h3{
+        padding-bottom: 0.5rem;
+    }
+    h2, h3{
+        color: $color-white;
+    }
+    a{
+        color: $color-gray-light;
+    }
+    a:hover{
+        color: $color-pink;
+    }
+
+    &__top{
+        margin-top:8rem;
+        padding:6rem 0;
+        border-bottom: solid 1px $color-gray-light;
+        border-top: solid 1px $color-gray-light;
+        display:grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content:center;
+
+        .search-form{
+            justify-self: center;
+            padding-top: 2rem;
+            input{
+                padding:1rem;
+                border-radius: .5rem 0 0 .5rem;
+                border: none;
+                outline: none;
+            }
+            button{
+                padding:0.9rem;
+                margin-left: -0.3rem;
+                color: $color-broken-white ;
+                outline: none;
+                border-radius: 0 .5rem .5rem 0;
+                border: none;
+                background-color:$color-gray;
+            }
+            button:hover{
+                background-color:$color-gray-lightest;
+            }
+        }
+    }
+    @media (min-width:76.5rem){
+        &__top{
+            grid-template-columns: 1fr 1fr;
+
+            .form{
+                padding-top: 0;
+                align-self:end;
+            }
+        }
+    }
+
+    &__middle{
+        padding: 4rem 0;
+        border-bottom: solid 1px $color-gray-light;
+        color: $color-gray-light;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:2rem;
+        .svg--logo{
+            width: 10rem;
+        }
+    }
+    @media (min-width:76.5rem){
+        grid-template-columns: 1fr 1fr ;
+    }
+    @media (min-width:76.5rem){
+        &__middle{
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap:1.8rem;
+        }
+    }
+    &__bottom{
+        color: $color-gray-light;
+        text-align: center;
+        padding: 2rem 0 0;
+    }
+}
+
+
+@media (min-width:38rem){
+    .promo-banner{
+        .promo-course{
+        grid-template-columns: 1fr 1fr;
+        }  
+
+    }
+}
+
+@media (min-width:76.5rem){
+    .promo-banner{
+        margin-top:32rem;
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+@media (min-width:87.5rem){
+    .promo-banner{
+        margin-top:15rem;
+    }
+}

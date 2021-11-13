@@ -1,11 +1,3 @@
-**Artevelde University of Applied Sciences**
-
-```
-Campus Mariakerke
-Industrieweg 232
-9030 Gent
-```
-
 June 15th 2021
 
 # @WORK 2
@@ -52,8 +44,7 @@ Tim De Paepe
 
 ## 1. Briefing
 
-Dit project betreft het eindproject voor het vak @work2 in de opleiding Graduaat Programmeren aan
-Arteveldehogeschool, gemaakt door Team Codegram. Team members zijn: Charlotte Delvaux, Thabisa
+Dit project betreft het eindproject voor het vak @work2, gemaakt door Team Codegram. Team members zijn: Charlotte Delvaux, Thabisa
 Dingani en Karelle Keters.
 
 Doel van deze opdracht is het ontwikkelen van een webshop om een project naar keuze te verkopen. Van
